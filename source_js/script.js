@@ -32,9 +32,17 @@ $(document).ready(function(){
             $(".top-menu").removeClass("shrink");
             $("#title-text").removeClass("shrink-text");
         }
-        if (pos >= scroll_pos[0]) {
+        if (pos >= scroll_pos[2]) {
             $("#navbar").css("background-color", "white");
             $("#navbar").css("box-shadow","0 0 8px blue");
+        }
+        else if (pos >= scroll_pos[1]){
+            $("#navbar").css("background-color", "firebrick");
+            $("#navbar").css("box-shadow","0 0 8px red");
+        }
+        else if (pos >= scroll_pos[0]) {
+            $("#navbar").css("background-color", "mediumaquamarine");
+            $("#navbar").css("box-shadow","0 0 8px red");
         }
         else {
             $("#navbar").css("background-color", "transparent");
@@ -93,9 +101,9 @@ $(document).ready(function(){
     );
     $("img[id|='modal']").hover(
         function() {
-            $(this).css("width", "90%")
+            $(this).css("width", "80%")
         }, function() {
-            $(this).css("width", "80%");
+            $(this).css("width", "60%");
         }
     );
 });
