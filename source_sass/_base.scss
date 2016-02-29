@@ -1,1 +1,190 @@
 // Add any custom Sass & CSS here
+@keyframes titleEffectChange {
+	from {
+		text-shadow: 2px 2px 2px black, 0 0 10px red;
+	}
+	to {
+		text-shadow: 2px 2px 2px black, 0 0 10px blue;
+	}
+}
+#navbar {
+	position: fixed;
+	width: 100%;
+	color: whitesmoke;
+	background-color: transparent;
+	transition: all 0.5s ease;
+	text-align: center;
+	z-index: 999;
+	.top-menu {
+		height: $navbar-height;
+		transition: all 0.5s ease;
+	}
+	#title {
+		#title-text {
+			line-height: $navbar-height;
+			font-size: $title-size;
+			color: white;
+			text-shadow: 2px 2px 2px black, 0 0 10px darkred;
+			animation-name: titleEffectChange;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			transition: all 0.5s ease;
+		}
+	}
+	#menu {
+		background-color: transparent;
+		display: table;
+		li {
+			display: table-cell;
+			vertical-align: middle;
+			a {
+				//font-family: fantasy;
+				font-size: 18px;
+				color: white;
+				font-weight: bold;
+				text-shadow: 1px 1px 2px black, 0 0 10px red;
+				//text-shadow: 1px 1px 2px black, 0 0 25px red, 0 0 5px darkred;
+				//text-shadow: 0 0 5px black;
+			}
+			.hlt_icon {
+				text-shadow: 1px 1px 2px black, 0 0 10px red;
+			}
+
+		}
+	}
+
+}
+.bhov {
+	text-shadow: 1px 1px 2px black, 0 0 10px green !important
+}
+.shrink {
+	height: 0.7*$navbar-height !important
+}
+.shrink-text {
+	font-size: 0.8*$title-size !important;
+	line-height: 0.7*$navbar-height !important
+}
+//#sec1 {
+//	position: relative;
+//}
+#container {
+	max-width: 100%;
+	//height: 100%;
+	position: relative;
+	box-shadow: 0 0 8px orange;
+	#prev {
+		//position: relative;
+		left: 0;
+	}
+	#next {
+		right: 0;
+	}
+	.toggle {
+		z-index: 11;
+		outline: none;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: $button-size;
+		height: $button-size;
+		opacity: 0.5;
+	}
+	#slide {
+		z-index: 10;
+		padding: 0px;
+		div {
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+}
+
+#sec-1s{
+	padding-top: $modal-padding;
+	padding-bottom: $modal-padding;
+	max-width: 100%;
+	.modal-box {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		img {
+			width: $modal-width;
+			transition: all 0.5s ease;
+			//max-width: 200px;
+		}
+	}
+}
+#modal1, #modal2, #modal3 {
+	background-color: beige;
+	.modal-title {
+		text-align: center;
+		font-family: fantasy;
+		color: darkred;
+	}
+}
+#sec-2s {
+	position: relative;
+	max-width: 100%;
+	//z-index: 100;
+	height: $bg2-height;
+	box-shadow: 0 0 8px red;
+	.bg {
+		background: url('../../data/pics/css/lamian.png') no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		margin: 0 auto;
+		padding: 0;
+		position: absolute;
+		z-index: -1;
+		width: 100%;
+		height: $bg2-height;
+	}
+	.video {
+		position:absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border-radius: 2px;
+		border: 2px solid red;
+		box-shadow: 0 0 8px red;
+	}
+}
+
+#sec-3s {
+	#about-title {
+		margin-top: 30px;
+		text-align: center;
+	}
+	.sicon {
+		.icon {
+			padding-top: 30px;
+			padding-bottom: 30px;
+			text-align: center;
+			.fa {
+				@include sicon-font($icon-font);
+				color: #FFF;
+				color: rgba(255, 255, 255, 0.8);
+				border-radius: 50%;
+				width: 100px;
+				height: 100px;
+				line-height: 100px;
+			}
+		}
+	}
+}
+
+footer {
+	box-shadow: 0 0 8px blue;
+	div {
+		text-align: center;
+		padding-top: 6px;
+		padding-bottom: 6px;
+		div p{
+			font-size: 20px;
+		}
+	}
+}
+

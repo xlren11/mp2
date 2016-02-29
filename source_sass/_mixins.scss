@@ -1,1 +1,4 @@
 // Insert your mixins
+@mixin sicon-font($ratio) {
+  font-size: $ratio;
+}
